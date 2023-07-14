@@ -1,0 +1,19 @@
+.note {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.note:hover {
+    /*color: #1677ff;
+    background-color: #e6f4ff;*/
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 500;
+}
