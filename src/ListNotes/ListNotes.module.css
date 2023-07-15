@@ -1,0 +1,9 @@
+.listNotes {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}

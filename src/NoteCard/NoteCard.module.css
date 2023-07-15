@@ -1,6 +1,7 @@
 .note {
     padding: 10px;
     cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .note:hover {

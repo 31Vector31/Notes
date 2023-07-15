@@ -7,7 +7,7 @@ function NoteCard({note}) {
         <div className={styles.note}>
             <div className={styles.header}>
                 <span className={styles.title}>{title}</span>
-                <span>{lastEditDate}</span>
+                <span>{new Date(lastEditDate).toLocaleString()}</span>
             </div>
             <div>{text}</div>
         </div>
