@@ -1,10 +1,11 @@
 import styles from "./NoteCard.module.css";
+import classNames from "classnames";
 
-function NoteCard({note}) {
+function NoteCard({note, onClick, isActive}) {
     const {title, lastEditDate, text} = note;
 
     return (
-        <div className={styles.note}>
+        <div className={classNames([styles.note, (isActive ? styles.active : null)])} onClick={onClick}>
             <div className={styles.header}>
                 <span className={styles.title}>{title}</span>
                 <span>{new Date(lastEditDate).toLocaleString()}</span>

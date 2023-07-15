@@ -5,9 +5,12 @@
 }
 
 .note:hover {
-    /*color: #1677ff;
-    background-color: #e6f4ff;*/
     background-color: rgba(0, 0, 0, 0.06);
+}
+
+.active {
+    color: #1677ff;
+    background-color: #e6f4ff;
 }
 
 .header {
