@@ -27,6 +27,12 @@ function App() {
         setNotes(newNotes);
     }, [notes]);
 
+    const deleteNote = useCallback((id) => {
+        const newNotes = notes.filter(note => note.id !== id);
+        setNotes(newNotes);
+        setIdSelectedNote(null);
+    }, [notes]);
+
     const selectedNote = useMemo(() => notes.find(note => note.id === idSelectedNote), [notes, idSelectedNote]);
 
     return (
@@ -37,7 +43,7 @@ function App() {
                                idSelectedNote={idSelectedNote}/>
                 </Col>
                 <Col xs={24} sm={18}>
-                    {selectedNote && <Workspace selectedNote={selectedNote} editNote={editNote}/>}
+                    {selectedNote && <Workspace selectedNote={selectedNote} editNote={editNote} deleteNote={deleteNote}/>}
                 </Col>
             </Row>
         </div>
