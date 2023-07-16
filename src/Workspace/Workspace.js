@@ -2,6 +2,7 @@ import React, {useCallback, useState} from 'react';
 import styles from "./Workspace.module.css";
 import {Button} from "antd";
 import TextEditor from "../TextEditor/TextEditor";
+import ReactMarkdown from 'react-markdown'
 
 function Workspace({selectedNote, editNote}) {
     const {text} = selectedNote;
@@ -21,10 +22,8 @@ function Workspace({selectedNote, editNote}) {
                     <TextEditor text={text} saveNote={saveNote}/>
                 </div> :
                 <div>
-                    <div>
-                        <Button onClick={() => setIsEditMode(true)} type="primary">Edit</Button>
-                    </div>
-                    {text}
+                    <Button onClick={() => setIsEditMode(true)} type="primary">Edit</Button>
+                    <ReactMarkdown>{text}</ReactMarkdown>
                 </div>}
         </div>
     );
