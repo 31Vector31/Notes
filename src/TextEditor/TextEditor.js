@@ -10,10 +10,14 @@ function TextEditor({text, saveNote}) {
         setValue(value);
     }, []);
 
+    const save = useCallback(() => {
+        saveNote(value);
+    }, [value]);
+
     return (
         <div>
             <SimpleMdeReact value={value} onChange={onChange}/>
-            <Button onClick={() => saveNote(value)} type="primary">Save</Button>
+            <Button onClick={save} type="primary">Save</Button>
         </div>
     );
 }
